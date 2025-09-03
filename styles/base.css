@@ -172,3 +172,8 @@ footer .year {
     margin: 0 auto;
   }
 }
+
+body {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
