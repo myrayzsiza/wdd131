@@ -175,5 +175,11 @@ footer .year {
 
 body {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: #f0f2f5;
   font-weight: 400;
+}
+
+h1, h2, h3, .section-title, .card-header {
+  font-family: 'Poppins', sans-serif;
 }
