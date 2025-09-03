@@ -36,10 +36,34 @@ nav {
   padding: 12px 0;
   font-size: 14px;
 }
+
 nav a {
   color: #fff;
   text-decoration: none;
+  position: relative;
+  padding: 4px 0;
+  transition: color 0.3s ease;
 }
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: var(--blue);
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--blue);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
 
 /* Main container with two cards side by side */
 .container {
