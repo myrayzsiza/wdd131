@@ -4,17 +4,19 @@
   --panel: #f7f7f7;
   --text: #333;
   --muted: #777;
+  --shadow: 0 2px 6px rgba(0,0,0,.08);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
   color: var(--text);
   background: #f0f2f5;
+  font-weight: 400;
 }
 
-/* Top bars (title bar and nav) */
+/* Header */
 header .titlebar {
   background: #1b4f79;
   color: #fff;
@@ -23,10 +25,11 @@ header .titlebar {
   font-weight: 700;
   letter-spacing: .5px;
 }
-header .titlebar span {
-  font-weight: 700;
+header .titlebar span#course-title {
+  display: block;
 }
 
+/* Nav */
 nav {
   background: #2b2f33;
   color: #fff;
@@ -36,7 +39,6 @@ nav {
   padding: 12px 0;
   font-size: 14px;
 }
-
 nav a {
   color: #fff;
   text-decoration: none;
@@ -44,7 +46,6 @@ nav a {
   padding: 4px 0;
   transition: color 0.3s ease;
 }
-
 nav a::after {
   content: "";
   position: absolute;
@@ -55,97 +56,114 @@ nav a::after {
   background: var(--blue);
   transition: width 0.3s ease;
 }
-
 nav a:hover {
   color: var(--blue);
 }
-
 nav a:hover::after {
   width: 100%;
 }
 
-
-/* Main container with two cards side by side */
-.container {
-  width: min(1100px, 95%);
-  margin: 20px auto;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 18px;
+/* Main heading */
+main h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 24px 0;
+  color: var(--blue-dark);
 }
 
+/* Cards container */
+.cards-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* About Me card - left */
+.about-card {
+  flex: 1; /* full size */
+}
+
+/* Resources card - right, slightly bigger than before but smaller than About Me */
+.resources-card {
+  flex: 0.45; /* slightly bigger than old width, smaller than About Me */
+}
+
+/* Shared card styles */
 .card {
   background: #fff;
   border: 1px solid #cbd5e1;
   border-radius: 8px;
   padding: 18px;
-  box-shadow: 0 2px 0 rgba(0,0,0,.03);
+  box-shadow: var(--shadow);
 }
 
-/* About Me card header style */
+/* Card header */
 .card-header {
-  background: #1f4a6e;
+  background: var(--blue);
   color: #fff;
   padding: 12px 14px;
   border-radius: 6px 6px 0 0;
   font-weight: 700;
   text-align: center;
-  margin: -18px -18px 16px -18px; /* emulate panel edge as in screenshot */
+  margin: -18px -18px 16px -18px;
 }
 
-.about-layout {
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  align-items: start;
+/* About Me card layout (horizontal) */
+.about-card .about-layout {
+  display: flex;
+  flex-direction: row;
   gap: 18px;
+  align-items: flex-start;
 }
-
-.about-text p {
+.about-card .about-text p {
   line-height: 1.5;
   font-size: 14.5px;
 }
-
-.section-title {
+.about-card .section-title {
   font-size: 22px;
   font-weight: 700;
   text-align: center;
   margin: 6px 0 12px;
-  padding-top: 8px;
-  border-top: 1px solid transparent;
 }
-
-.flag {
+.about-card .flag {
   max-width: 180px;
   height: auto;
   border: 1px solid #ddd;
   display: block;
   margin: 6px 0 0;
 }
-
-.author-photo {
+.about-card .author-photo-wrap {
+  display: flex;
+  justify-content: center;
+}
+.about-card .author-photo {
   width: 150px;
   height: 150px;
   object-fit: cover;
   border-radius: 4px;
   border: 1px solid #ddd;
-  align-self: start;
-  margin-top: 8px;
 }
 
-/* Right rail (Web Dev Resources) */
-.resources ul {
+/* Resources card (vertical) */
+.resources-card ul {
+  list-style: none;
   padding-left: 20px;
   margin: 6px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
-.resources li {
-  margin: 8px 0;
-}
-.resources a {
+.resources-card li a {
   color: #1a0dab;
   text-decoration: underline;
 }
 
-/* Footer styling */
+/* Footer */
 footer {
   margin-top: 14px;
   background: #1f405b;
@@ -161,25 +179,13 @@ footer .year {
 
 /* Responsive tweaks */
 @media (max-width: 900px) {
-  .container {
-    grid-template-columns: 1fr;
+  .cards-container {
+    flex-direction: column;
   }
-  .about-layout {
-    grid-template-columns: 1fr;
+  .about-card .about-layout {
+    flex-direction: column;
   }
-  .author-photo {
-    display: block;
+  .about-card .author-photo {
     margin: 0 auto;
   }
-}
-
-body {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
-  color: var(--text);
-  background: #f0f2f5;
-  font-weight: 400;
-}
-
-h1, h2, h3, .section-title, .card-header {
-  font-family: 'Poppins', sans-serif;
 }

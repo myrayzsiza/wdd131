@@ -5,19 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="This page is for the WDD 131 – Dynamic Web Fundamentals course, created by Raymond Bamutesiza, a BYU student from Uganda. It includes personal details, resources, and project links.">
   <meta name="author" content="Raymond Bamutesiza">
-
+  
   <title>WDD 131 – Dynamic Web Fundamentals – Raymond Bamutesiza</title>
-
-  <!-- Google Fonts -->
+  
+  <!-- Google Fonts preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto&display=swap" rel="stylesheet">
-
+  
   <link rel="stylesheet" href="styles/base.css">
 </head>
 <body>
 
-  <!-- Top navigation/header -->
+  <!-- Header -->
   <header>
     <div class="titlebar">
       <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span> - Raymond Bamutesiza
@@ -27,68 +27,63 @@
       <a href="https://byupw.instructure.com/">Canvas</a>
       <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/9?lang=eng">Scripture</a>
       <a href="#">Final Project</a>
-      <a href="#">Dev.to Community</a>
-      <a href="#">Smashing Magazine</a>
-      <a href="#">CSS Tricks</a>
-      <a href="#">W3 Schools</a>
-      <a href="#">Udemy</a>
-      <a href="#">Image Placeholder</a>
     </nav>
   </header>
 
-  <!-- Main content -->
-  <main class="container">
+  <!-- Main Content -->
+  <main>
+    <!-- Main Heading -->
     <h1>Raymond Bamutesiza</h1>
 
-    <!-- About Me Section -->
-    <section class="card" aria-labelledby="about-title">
-      <h2 id="about-title">About Me</h2>
+    <!-- Cards container -->
+    <div class="cards-container">
+      <!-- About Me Card -->
+      <section class="card about-card" aria-labelledby="about-title">
+        <div class="card-header" id="about-title">About Me</div>
+        <div class="about-layout">
+          <div class="about-text">
+            <p>
+              My name is Raymond Bamutesiza and I go by Ray. I was born in Uganda and live with my family in Jinja, Uganda. I am currently enrolled as a BYU student. I love to learn new things every day and I enjoy spending time with my friends.
+            </p>
+            <h2 class="section-title" aria-label="Location">Jinja, Uganda</h2>
+            <p>
+              Uganda is a landlocked country in East Africa, known as the “Pearl of Africa” for its beautiful landscapes of mountains, lakes, and savannas. Its capital is Kampala, and it has many ethnic groups and languages, with English and Swahili as official languages. Uganda is famous for wildlife like gorillas and lions, and its economy relies on agriculture, tourism, and trade.
+            </p>
+            <img src="images/flag.jpeg" alt="Official Flag of Uganda" class="flag" />
+          </div>
 
-      <div class="about-layout">
-        <div class="about-text">
-          <p>
-            My name is Raymond Bamutesiza and I go by Ray. I was born in Uganda and live with my family in Jinja, Uganda. I am currently enrolled as a BYU student. I love to learn new things every day and I love to spend time with my friends.
-          </p>
-
-          <h2>Location</h2>
-          <h3>Jinja, Uganda</h3>
-          <p>
-            Uganda is a landlocked country in East Africa, known as the “Pearl of Africa” for its beautiful landscapes of mountains, lakes, and savannas. Its capital is Kampala, and it has many ethnic groups and languages, with English and Swahili as official languages. Uganda is famous for wildlife like gorillas and lions, and its economy relies on agriculture, tourism, and trade.
-          </p>
-
-          <img src="images/flag.jpeg" alt="Official Flag of Uganda" class="flag" />
+          <div class="author-photo-wrap">
+            <img src="images/mine.jpg" alt="Author portrait" class="author-photo" />
+          </div>
         </div>
+      </section>
 
-        <div class="author-photo-wrap">
-          <img src="images/mine.jpg" alt="Author portrait" class="author-photo" />
+      <!-- Web Dev Resources Card -->
+      <aside class="card resources-card" aria-label="Web development resources">
+        <div class="card-header">Web Dev Resources</div>
+        <div class="card-content">
+          <ul>
+            <li><a href="#">Dev.to Community</a></li>
+            <li><a href="#">Smashing Magazine</a></li>
+            <li><a href="#">CSS Tricks</a></li>
+            <li><a href="#">W3 Schools</a></li>
+            <li><a href="#">Udemy</a></li>
+            <li><a href="#">Image Placeholder</a></li>
+          </ul>
         </div>
-      </div>
-    </section>
-
-    <!-- Web Dev Resources Section -->
-    <aside class="card resources" aria-label="Web development resources">
-      <h2>Web Dev Resources</h2>
-      <ul>
-        <li><a href="#">Dev.to Community</a></li>
-        <li><a href="#">Smashing Magazine</a></li>
-        <li><a href="#">CSS Tricks</a></li>
-        <li><a href="#">W3 Schools</a></li>
-        <li><a href="#">Udemy</a></li>
-        <li><a href="#">Image Placeholder</a></li>
-      </ul>
-    </aside>
+      </aside>
+    </div>
   </main>
 
   <!-- Footer -->
   <footer role="contentinfo">
-    <span class="year">©2025</span>
-    Raymond Bamutesiza
-    <span class="footer-separator">•</span> Uganda
-    <div class="footer-note">
-      Last modification: 03/09/2025 1:00:30
-    </div>
+    <p>
+      &copy; <span id="currentyear"></span> Raymond Bamutesiza • Uganda
+    </p>
+    <p id="lastModified"></p>
   </footer>
 
+  <!-- JavaScript -->
   <script src="scripts/getdates.js" defer></script>
 </body>
 </html>
