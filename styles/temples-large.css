@@ -1,44 +1,59 @@
 /* temples-large.css */
 
-/* Only applied to larger screens (desktop / wide view) */
-@media (min-width: 1025px) {
-  /* Adjust header font size for large screens */
+/* Base overrides for large screens */
+@media (min-width: 641px) {
+
+  /* Header adjustments */
+  .site-header {
+    padding: 28px 40px;
+  }
+
   .brand {
-    font-size: 36px;
+    font-size: 40px;
   }
 
-  /* Navigation menu horizontal spacing */
+  /* Navigation menu horizontal and visible */
+  .nav {
+    display: flex;
+    gap: 24px;
+    font-size: 18px;
+  }
+
+  /* Nav link hover effect */
   .nav a {
-    font-size: 20px;
-    margin: 0 20px;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 4px;
   }
 
-  /* Gallery grid: 3 columns on large screens */
+  .nav a:hover {
+    color: #ffcc00; /* accent color on hover */
+    border-bottom: 2px solid #ffcc00;
+  }
+
+  /* Hamburger hidden on larger screens */
+  .hamburger {
+    display: none;
+  }
+
+  /* Gallery: 3 columns on larger screens */
   .gallery {
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
   }
 
   .card img {
-    height: 200px; /* slightly taller images on desktop */
+    height: 200px;
+  }
+}
+
+/* Extra large screens adjustments */
+@media (min-width: 1025px) {
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 36px;
   }
 
-  /* Footer adjustments */
-  .site-footer {
-    padding: 20px 0;
-  }
-
-  .footer-content {
-    font-size: 16px;
-  }
-
-  /* Show navigation if hidden in mobile */
-  .nav {
-    display: flex !important;
-  }
-
-  /* Hide the hamburger on large screens */
-  .hamburger {
-    display: none;
+  .card img {
+    height: 220px;
   }
 }
