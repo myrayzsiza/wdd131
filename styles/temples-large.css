@@ -1,0 +1,44 @@
+/* temples-large.css */
+
+/* Only applied to larger screens (desktop / wide view) */
+@media (min-width: 1025px) {
+  /* Adjust header font size for large screens */
+  .brand {
+    font-size: 36px;
+  }
+
+  /* Navigation menu horizontal spacing */
+  .nav a {
+    font-size: 20px;
+    margin: 0 20px;
+  }
+
+  /* Gallery grid: 3 columns on large screens */
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .card img {
+    height: 200px; /* slightly taller images on desktop */
+  }
+
+  /* Footer adjustments */
+  .site-footer {
+    padding: 20px 0;
+  }
+
+  .footer-content {
+    font-size: 16px;
+  }
+
+  /* Show navigation if hidden in mobile */
+  .nav {
+    display: flex !important;
+  }
+
+  /* Hide the hamburger on large screens */
+  .hamburger {
+    display: none;
+  }
+}
