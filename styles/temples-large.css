@@ -1,59 +1,29 @@
-/* temples-large.css */
-
-/* Base overrides for large screens */
 @media (min-width: 641px) {
 
-  /* Header adjustments */
-  .site-header {
-    padding: 28px 40px;
-  }
+  .site-header { padding: 28px 40px; }
+  .brand { font-size: 40px; }
 
-  .brand {
-    font-size: 40px;
-  }
-
-  /* Navigation menu horizontal and visible */
   .nav {
     display: flex;
     gap: 24px;
     font-size: 18px;
   }
 
-  /* Nav link hover effect */
   .nav a {
     transition: color 0.3s, border-bottom 0.3s;
     padding-bottom: 4px;
   }
 
   .nav a:hover {
-    color: #ffcc00; /* accent color on hover */
+    color: #ffcc00;
     border-bottom: 2px solid #ffcc00;
   }
 
-  /* Hamburger hidden on larger screens */
-  .hamburger {
-    display: none;
-  }
+  .hamburger { display: none; }
 
-  /* Gallery: 3 columns on larger screens */
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-  }
-
-  .card img {
-    height: 200px;
-  }
+  .gallery { grid-template-columns: repeat(3, 1fr); gap: 32px; }
 }
 
-/* Extra large screens adjustments */
 @media (min-width: 1025px) {
-  .gallery {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 36px;
-  }
-
-  .card img {
-    height: 220px;
-  }
+  .gallery { grid-template-columns: repeat(4, 1fr); gap: 36px; }
 }
