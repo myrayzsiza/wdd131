@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <!-- SEO & Author Meta Tags -->
+  <meta name="author" content="Your Name"><!-- 🔹 Replace with your real name -->
+  <meta name="description" content="Discover Uganda: Explore the beauty, culture, wildlife, and attractions of the Pearl of Africa.">
+
+  <title>Discover Uganda</title>
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="brand-header" aria-label="Uganda">
+    Uganda
+  </header>
+  <div class="flag-stripe" aria-hidden="true"></div>
+
+  <!-- Hero with floating panels -->
+  <main class="hero" aria-label="Uganda hero with data and weather panels">
+    <picture>
+      <source srcset="images/uganda-large.webp" media="(min-width: 768px)">
+      <img src="images/uganda-small.webp" alt="Scenic view of Uganda" class="bg-image">
+    </picture>
+
+    <!-- Data panel -->
+    <section class="panel data" aria-label="Data panel">
+      <span class="title">Country Info</span>
+      <div class="row"><span class="label">Area:</span><span class="value">241,038 sq km</span></div>
+      <div class="row"><span class="label">Population:</span><span class="value">48 million</span></div>
+      <div class="row"><span class="label">Capital:</span><span class="value">Kampala</span></div>
+      <div class="row"><span class="label">Languages:</span><span class="value">English, Swahili, Luganda</span></div>
+      <div class="row"><span class="label">Currency:</span><span class="value">Ugandan Shilling (UGX)</span></div>
+      <div class="row"><span class="label">Time Zone:</span><span class="value">UTC+3</span></div>
+      <div class="row"><span class="label">Calling Code:</span><span class="value">+256</span></div>
+      <div class="row"><span class="label">Internet TLD:</span><span class="value">.ug</span></div>
+    </section>
+
+    <!-- Weather panel -->
+    <section class="panel weather" aria-label="Weather panel">
+      <span class="title">Weather</span>
+      <div class="row"><span class="label">Temperature:</span><span class="value" id="temp">10°C</span></div>
+      <div class="row"><span class="label">Conditions:</span><span class="value">Partly Cloudy</span></div>
+      <div class="row"><span class="label">Wind:</span><span class="value" id="speed">5 km/h</span></div>
+      <div class="row"><span class="label">Wind Chill:</span><span class="value" id="windchill"></span></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footerbar" aria-label="Footer information">
+    © <span id="year"></span> | Last Modified: <span id="lastModified"></span>
+  </footer>
+
+  <!-- Thin black bar under footer -->
+  <div class="footer-stripe" aria-hidden="true"></div>
+
+</body>
+</html>
