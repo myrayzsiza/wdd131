@@ -24,9 +24,11 @@ html,body{
   color:white;
   text-align:center;
   font-weight:700;
-  font-size:48px;
-  padding:20px 10px;
+  font-size: clamp(24px, 4vw, 38px); /* smaller, balanced font */
+  padding:12px 10px; /* reduced padding for shorter header */
   letter-spacing:.5px;
+  margin-bottom:6px; /* space below header */
+  line-height:1.2; /* tighter line spacing */
 }
 
 /* Black stripe */
@@ -50,7 +52,7 @@ html,body{
   inset:0;
   width:100%;
   height:100%;
-  object-fit:cover; /* ✅ ensures correct image scaling */
+  object-fit:cover;
   z-index:0;
 }
 
@@ -86,17 +88,33 @@ html,body{
   margin-bottom:10px;
 }
 
+.panel .title::after {
+  content: " ⛅"; /* Wide view emoji */
+  font-size: 18px;
+  margin-left: 6px;
+}
+
 .panel .row{
   display:flex;
   justify-content:space-between;
   padding:6px 0;
   font-size:13px;
 }
+
 .panel .label{ font-weight:600; color:#444; }
 .panel .value{ font-weight:500; }
 
+/* Panel positions */
 .panel.data{ left:40px; top:170px; }
 .panel.weather{ right:40px; top:240px; }
+
+/* Mobile SVG weather icon */
+.weather-icon-mobile {
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin-bottom: 8px;
+}
 
 /* Footer */
 .footerbar{
@@ -114,13 +132,23 @@ html,body{
   .panel{ width: 260px; }
   .panel.data{ left:20px; top:220px; }
   .panel.weather{ right:20px; top:290px; }
-  .brand-header{ font-size:40px; }
 }
 
 @media (max-width: 600px){
-  .brand-header{ font-size:34px; }
+  .brand-header{ font-size: clamp(20px, 6vw, 32px); } /* extra small for very small screens */
   .hero{ min-height: 60vh; }
-  .panel{ width: 90%; left:5%; right:5%; top:auto; bottom:auto; }
+  .panel{
+    width: 90%;
+    left:5%;
+    right:5%;
+    top:auto;
+    bottom:auto;
+  }
   .panel.data{ bottom:210px; }
   .panel.weather{ bottom:110px; }
+  .weather-icon-mobile { display: block; }
+}
+
+@media (min-width: 601px){
+  .weather-icon-mobile { display: none; } /* hide SVG on wider screens */
 }
