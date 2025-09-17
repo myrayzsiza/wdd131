@@ -18,26 +18,23 @@ html,body{
   background: var(--yellow);
 }
 
-/* Header */
 .brand-header{
   background:var(--red);
   color:white;
   text-align:center;
   font-weight:700;
-  font-size: clamp(24px, 4vw, 38px); /* smaller, balanced font */
-  padding:12px 10px; /* reduced padding for shorter header */
+  font-size: clamp(24px, 4vw, 38px);
+  padding:12px 10px;
   letter-spacing:.5px;
-  margin-bottom:6px; /* space below header */
-  line-height:1.2; /* tighter line spacing */
+  margin-bottom:6px;
+  line-height:1.2;
 }
 
-/* Black stripe */
 .flag-stripe{
   height:6px;
   background: var(--black);
 }
 
-/* Hero */
 .hero{
   position:relative;
   min-height:72vh;
@@ -64,7 +61,6 @@ html,body{
   z-index:1;
 }
 
-/* Panels */
 .panel{
   position: absolute;
   width: 290px;
@@ -89,7 +85,7 @@ html,body{
 }
 
 .panel .title::after {
-  content: " ⛅"; /* Wide view emoji */
+  content: " ⛅";
   font-size: 18px;
   margin-left: 6px;
 }
@@ -104,11 +100,9 @@ html,body{
 .panel .label{ font-weight:600; color:#444; }
 .panel .value{ font-weight:500; }
 
-/* Panel positions */
 .panel.data{ left:40px; top:170px; }
 .panel.weather{ right:40px; top:240px; }
 
-/* Mobile SVG weather icon */
 .weather-icon-mobile {
   width: 40px;
   height: 40px;
@@ -116,7 +110,6 @@ html,body{
   margin-bottom: 8px;
 }
 
-/* Footer */
 .footerbar{
   background:var(--red);
   color:white;
@@ -127,7 +120,6 @@ html,body{
   z-index:3;
 }
 
-/* Responsive */
 @media (max-width: 900px){
   .panel{ width: 260px; }
   .panel.data{ left:20px; top:220px; }
@@ -135,7 +127,7 @@ html,body{
 }
 
 @media (max-width: 600px){
-  .brand-header{ font-size: clamp(20px, 6vw, 32px); } 
+  .brand-header{ font-size: clamp(20px, 6vw, 32px); }
   .hero{ min-height: 60vh; }
   .panel{
     width: 90%;
@@ -150,5 +142,5 @@ html,body{
 }
 
 @media (min-width: 601px){
-  .weather-icon-mobile { display: none; } 
+  .weather-icon-mobile { display: none; }
 }
