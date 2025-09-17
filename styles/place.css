@@ -135,7 +135,7 @@ html,body{
 }
 
 @media (max-width: 600px){
-  .brand-header{ font-size: clamp(20px, 6vw, 32px); } /* extra small for very small screens */
+  .brand-header{ font-size: clamp(20px, 6vw, 32px); } 
   .hero{ min-height: 60vh; }
   .panel{
     width: 90%;
@@ -150,5 +150,5 @@ html,body{
 }
 
 @media (min-width: 601px){
-  .weather-icon-mobile { display: none; } /* hide SVG on wider screens */
+  .weather-icon-mobile { display: none; } 
 }
