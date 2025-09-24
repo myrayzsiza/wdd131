@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Temple Album - Home</title>
+
+  <meta name="description" content="A responsive temple album page showcasing various temples with images and captions, built using HTML, CSS, and JavaScript.">
+  <meta name="author" content="Raymond Bamutesiza">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/filtered_temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <h1 class="brand" aria-label="Temple Album">Temple Album</h1>
+
+      <!-- Hamburger button for mobile -->
+      <button class="hamburger" aria-label="Menu" aria-expanded="false">☰</button>
+
+      <nav class="nav" aria-label="Main Navigation">
+        <a href="#">Home</a>
+        <a href="#">Old</a>
+        <a href="#">New</a>
+        <a href="#">Large</a>
+        <a href="#">Small</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="container" role="main">
+    <div class="page-title">Home</div>
+
+    <h2>Temple Gallery</h2>
+
+    <!-- Gallery section will be filled dynamically -->
+    <section class="gallery" aria-label="Gallery grid">
+      <!-- JavaScript will generate temple cards here -->
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-content">
+      © <span id="year"></span> ✿ Raymond Bamutesiza ✿ Uganda<br/>
+      Last Modified: <span id="lastModified"></span>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="scripts/filtered_temples.js" defer></script>
+</body>
+</html>
