@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Submit your product review using this form.">
-    <meta name="author" content="Your Name">
+    <meta name="author" content="Raymond Bamutesiza">
     <meta name="keywords" content="Product Review, Form, W05 Assignment, HTML, CSS, JavaScript">
     <meta name="robots" content="index, follow">
     <title>Product Review Form</title>
+    <!-- Google Font added -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
@@ -38,10 +40,11 @@
 
         <!-- Useful Features -->
         <fieldset>
-            <legend>Useful Features:</legend>
-            <label><input type="checkbox" name="features" value="Ease of Use"> Ease of Use</label>
+            <legend>Useful Features (required at least 1):</legend>
+            <label><input type="checkbox" name="features" value="Ease of Use" required> Ease of Use</label>
             <label><input type="checkbox" name="features" value="Performance"> Performance</label>
             <label><input type="checkbox" name="features" value="Design"> Design</label>
+            <label><input type="checkbox" name="features" value="Support"> Support</label>
         </fieldset>
 
         <!-- Written Review -->
@@ -53,13 +56,13 @@
         <input type="text" id="username" name="username">
 
         <!-- Submit Button -->
-        <input type="submit" value="Submit Review">
+        <input type="submit" value="Submit">
     </form>
 
     <footer>
-        <p>© 2025 Your Name. All rights reserved.</p>
+        <p>© 2025 Raymond Bamutesiza. All rights reserved.</p>
     </footer>
 
-    <script src="scripts/"></script>
+    <script src="scripts/main.js" defer></script>
 </body>
 </html>

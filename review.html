@@ -8,6 +8,7 @@
     <meta name="keywords" content="Product Review, Confirmation, W05 Assignment">
     <meta name="robots" content="index, follow">
     <title>Review Submitted</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
@@ -19,10 +20,10 @@
     <p>You have submitted <span id="reviewCount">0</span> review(s).</p>
 
     <footer>
-        <p>© 2025 Your Name. All rights reserved.</p>
+        <p>© 2025 Raymond Bamutesiza. All rights reserved.</p>
     </footer>
 
-    <script>
+    <script defer>
         document.addEventListener("DOMContentLoaded", function() {
             let count = localStorage.getItem("reviewCount") || 0;
             count = Number(count) + 1;
