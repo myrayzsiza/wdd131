@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product Review Confirmation Page">
+    <meta name="author" content="Your Name">
+    <meta name="keywords" content="Product Review, Confirmation, W05 Assignment">
+    <meta name="robots" content="index, follow">
+    <title>Review Submitted</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Thank You for Your Review!</h1>
+    </header>
+
+    <p>Your review has been submitted successfully.</p>
+    <p>You have submitted <span id="reviewCount">0</span> review(s).</p>
+
+    <footer>
+        <p>© 2025 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Use localStorage to count reviews
+        let count = localStorage.getItem("reviewCount") || 0;
+        count = Number(count) + 1;
+        localStorage.setItem("reviewCount", count);
+        document.getElementById("reviewCount").textContent = count;
+    </script>
+</body>
+</html>
